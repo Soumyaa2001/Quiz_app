@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Master</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  <div id="quiz-container">
+    <div class="quiz-header">
+      <h2>🧠 Quiz Master</h2>
+      <button id="darkModeBtn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </div>
+    
+    <div id="progress-container">
+      <span id="question-count">Question 1 of 4</span>
+      <div id="progressBar"><div id="progress"></div></div>
+    </div>
+    
+    <h1 id="question">Loading...</h1>
+    <div id="options"></div>
+    
+    <div class="btn-container">
+      <button id="prevBtn" onclick="prevQuestion()" disabled>← Previous</button>
+      <button id="nextBtn" onclick="nextQuestion()">Next →</button>
+      <button id="submitBtn" onclick="submitQuiz()" style="display:none;">Submit Quiz</button>
+      <button id="restartBtn" onclick="restartQuiz()" style="display:none;">Restart Quiz</button>
+    </div>
+    
+    <div id="result"></div>
+    <div id="userAnswer"></div>
+  </div>
+  <script src="quiz.js"></script>
+</body>
+</html>
